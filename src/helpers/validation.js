@@ -21,5 +21,17 @@ const loginValidation = (data) => {
     return schema.validate(data);
 }
 
+//Create Event Validation
+const createEventValidation = (data) => {
+    const schema = Joi.object({
+        nubiles: Joi.array(),
+        guests: Joi.array(),
+        eventDateTime: Joi.date(),
+    });
+
+    return schema.validate(data);
+}
+
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
+module.exports.createEventValidation = createEventValidation;
