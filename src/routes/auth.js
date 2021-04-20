@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const {
     registerValidation,
     loginValidation
-} = require('../validation');
+} = require('../helpers/validation');
 
 router.post('/register', async (req, res) => {
 
