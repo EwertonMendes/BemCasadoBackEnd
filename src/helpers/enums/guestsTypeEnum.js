@@ -1,8 +1,11 @@
 const guestsType = {
-    GROOMSMAN: "Padrinho",
-    MAID: "Madrinha",
-    GROOMSMOTHER: "Mãe do Noivo",
-    GROOMSFATHER: "Pai do Noivo",
-    BRIDESMOTHER: "Mãe da Noiva",
-    BRIDESFATHER: "Pai da Noiva"
+    REGULAR: "REGULAR",
+    GROOMSMAN: "GROOMSMAN",
+    MAID: "MAID",
+    GROOMSMOTHER: "GROOMSMOTHER",
+    GROOMSFATHER: "GROOMSFATHER",
+    BRIDESMOTHER: "BRIDESMOTHER",
+    BRIDESFATHER: "BRIDESFATHER"
 }
+
+module.exports.guestsTypeEnum = guestsType

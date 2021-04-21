@@ -1,4 +1,6 @@
 const nubilesType = {
-    GROOM: "Noivo",
-    BRIDE: "Noiva"
+    GROOM: "GROOM",
+    BRIDE: "BRIDE"
 }
+
+module.exports.nubilesTypeEnum = nubilesType
