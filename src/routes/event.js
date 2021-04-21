@@ -11,6 +11,15 @@ const {
     createEventValidation
 } = require('../helpers/validation');
 
+router.get('/getAll', verify, async (req, res) => {
+    try {
+        const userEvents = await Event.find({userId: req.user._id})
+        res.send(userEvents)
+    } catch (err) {
+
+    }
+})
+
 router.post('/create', verify, async (req, res) => {
 
     //Validation of the data
