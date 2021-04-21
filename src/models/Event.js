@@ -8,12 +8,12 @@ const eventSchema = new mongoose.Schema({
     },
     nubiles: [{
         firstName: String,
-        lastname: String,
+        lastName: String,
         nubileType: String
     }],
     guests: [{
         firstName: String,
-        lastname: String,
+        lastName: String,
         guestType: String
     }],
     eventDateTime: {
