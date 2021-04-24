@@ -11,10 +11,27 @@ const {
     createEventValidation
 } = require('../helpers/validation');
 
-router.get('/getAll', verify, async (req, res) => {
+router.get('/get', verify, async (req, res) => {
     try {
         const userEvents = await Event.find({userId: req.user._id})
         res.send(userEvents)
+    } catch (err) {
+
+    }
+})
+
+router.get('/getAll', async (req, res) => {
+    try {
+        const events = {
+            allEvents: [],
+            count: 0
+        }
+        const userEvents = await Event.find()
+        events.allEvents = userEvents,
+        Event.countDocuments({}, function(err, count) {
+            events.count = count
+        })
+        res.send(events)
     } catch (err) {
 
     }
